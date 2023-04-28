@@ -61,9 +61,7 @@
                 <li class="page-item"><a class="num" href="?cates={{cate_title}}&page={{ pr }}">{{ pr }}</a></li>
                 {% endfor %}
                 {% if page_info.endPage != page_info.totalPage %}
-                    <li>
-                        <a href="?cates={{cate_title}}&page={{page_info.currentPage|add:10}}" class="arrow right">&gt</a>
-                    </li>
+                <li> <a href="?cates={{cate_title}}&page={{page_info.currentPage|add:10}}" class="arrow right">&gt</a></li>
                 {% endif %}
                 <li><a href="?cates={{cate_title}}&page={{ page_info.totalPage}}" class="last">last</a></li>
             </ul>

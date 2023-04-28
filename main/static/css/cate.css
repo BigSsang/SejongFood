@@ -15,11 +15,17 @@ main {
 	margin: 100px 100px 0px 100px;
 }
 
+form {
+    display: flex;
+    justify-content: center;
+}
+
 /* 버튼 색이랑 크기조절 */
 button {
     background-color: #289102d4;
     color: #ffffff;
     border: none;
+    margin: 10px;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
@@ -53,7 +59,7 @@ td {
     list-style: none;
     display: inline-block;
     padding: 0;
-    margin-top:20px
+    margin:40px 0 40px;
 }
 
 /* 페이징 마다 간격 및 글자 크기 */
@@ -66,43 +72,27 @@ td {
     line-height: 1.5;
 }
 
-.model .num{
-    background-color : #4CAF50;
-    color: #ffffff;
-}
-
-/* .model .num:hover{
-    background-color : #4CAF50;
-    color: #ffffff;
-} */
-
+/* 번호 및 화살표,첫,끝 모양+색 */
 .pagination a {
     color: black;
-    float: left;
-    padding: 6px 12px;
     text-decoration: none;
-    border-radius: 50%;
-    margin: 0 2px;
-    border: 1px solid #000000;
-  }
+    padding: 8px 14px;
+    margin: 0;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid black;
+}
 
-/* 클릭했을때 색 변함 */
-.pagination a:active{
+/* 마우스 올리면 색 변함 */
+.pagination a:hover {
     background-color: #4CAF50;
     color: white;
-    border: 1px solid #4CAF50;
+    border: 1px solid black;
 }
 
-/* 첫페이지로 */
-.first{
-    margin-right: 15px;
-}
-
-/* 마지막페이지로 */
-.last{
-    margin-left: 15px;
-}
-
-.first:hover, .last:hover, .left:hover, .right:hover{
-    color: #2e9cdf;
-}
+/* 이전/다음 버튼 스타일
+.pagination .arrow.disabled {
+    color: gray;
+    pointer-events: none;
+    background-color: #f8f9fa;
+} */
