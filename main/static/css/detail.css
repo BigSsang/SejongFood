@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+}
+  
+/* main 스타일 */
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 100px 100px 0px 100px;
+}
+
+.restaurant-info,
+.restaurant-list {
+	flex-basis: 65%;
+}
+
+.map-info {
+	flex-basis: 30%;
+}
+
+.restaurant-list {
+    border-top: 1px solid #ccc;
+    margin: 50px 0;
+    padding-top: 30px;
+}
+
+.info h2{
+    margin: 0 0 10px 0;
+}
+
+.info h3 {
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.info p {
+	margin-bottom: 20px;
+}
+
+.info ul li {
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.restaurant-list ul {
+	list-style: none;
+}
+
+.restaurant-list li {
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.restaurant-list h2{
+    margin: 0 0 10px 0;
+}
+
+.restaurant-list a {
+	color: #333;
+	text-decoration: none;
+}
+
+.restaurant-list a:hover {
+	text-decoration: underline;
+}
+
+.map {
+	height: 250px;
+	background-color: #f2f2f2;
+}
+
+.map-info h2{
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.nearby-restaurants h3 {
+	margin: 40px 0 10px 0;
+	font-size: 20px;
+}
+
+.nearby-restaurants ul {
+	list-style: none;
+}
+
+.nearby-restaurants li {
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.nearby-restaurants a {
+	color: #333;
+	text-decoration: none;
+}
+
+.nearby-restaurants a:hover {
+	text-decoration: underline;
+}
+
