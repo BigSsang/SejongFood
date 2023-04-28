@@ -2,7 +2,6 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from .models import *
-import requests
 import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
