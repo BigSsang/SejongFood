@@ -15,6 +15,7 @@ main {
 	margin: 100px 100px 0px 100px;
 }
 
+/* 버튼 중앙 */
 form {
     display: flex;
     justify-content: center;
@@ -24,7 +25,7 @@ form {
 button {
     background-color: #289102d4;
     color: #ffffff;
-    border: none;
+    border: 1px solid #2b4f1e93;
     margin: 10px;
     padding: 10px 20px;
     font-size: 16px;
@@ -80,19 +81,12 @@ td {
     margin: 0;
     border-radius: 5px;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid rgba(120, 120, 120, 0.495);
 }
 
 /* 마우스 올리면 색 변함 */
 .pagination a:hover {
     background-color: #4CAF50;
     color: white;
-    border: 1px solid black;
+    border: 1px solid #2b4f1e93;
 }
-
-/* 이전/다음 버튼 스타일
-.pagination .arrow.disabled {
-    color: gray;
-    pointer-events: none;
-    background-color: #f8f9fa;
-} */
