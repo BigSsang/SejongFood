@@ -35,7 +35,7 @@ def get_secret(setting, secrets=secrets):
 SECRET_KEY = get_secret("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -89,8 +89,8 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        # "NAME": BASE_DIR / "db.sqlite3",
-        "NAME": "/home/ssang/SejongFood/db.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+        # "NAME": "/home/ssang/SejongFood/db.sqlite3",
     }
 }
 
@@ -131,9 +131,8 @@ USE_TZ = True
 
 # 정적 파일 경로 추가
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "main/static"),
 ]
-
 STATIC_URL = "static/"
 
 # Default primary key field type
