@@ -139,3 +139,9 @@ def cate(request):
     cate_list = paginator.get_page(page_info["currentPage"]) 
 
     return render(request, 'main/cate.html', {"cate_list":cate_list, "page_info":page_info, "pageRange":pageRange,"cate_title":cates})
+
+def map(request, pk):
+    food = Sejong_A.objects.get(id=pk)
+
+    return render(request, 'main/map.html', {'food':food})
+

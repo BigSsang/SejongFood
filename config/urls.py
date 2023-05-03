@@ -25,4 +25,5 @@ urlpatterns = [
     path('', views.search, name='search'),
     path('detail/<int:pk>', views.detail, name='detail'),
     path('cate/', views.cate, name='cate'),
+    path('map/', views.map, name='map'),
 ]

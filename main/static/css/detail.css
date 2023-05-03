@@ -59,18 +59,18 @@ main {
     margin: 0 0 10px 0;
 }
 
-.restaurant-list a {
-	color: #333;
-	text-decoration: none;
-}
-
 .restaurant-list a:hover {
 	text-decoration: underline;
 }
 
-.map {
-	height: 250px;
-	background-color: #f2f2f2;
+/* 지도 */
+.map-info {
+	flex-basis: 30%;
+}
+
+main-map {
+	height: 500px;
+	/* background-color: #ffffff; */
 }
 
 .map-info h2{
@@ -78,6 +78,7 @@ main {
     margin: 0 0 10px 0;
 }
 
+/* 주변식당 */
 .nearby-restaurants h3 {
 	margin: 40px 0 10px 0;
 	font-size: 20px;
@@ -100,4 +101,3 @@ main {
 .nearby-restaurants a:hover {
 	text-decoration: underline;
 }
-
