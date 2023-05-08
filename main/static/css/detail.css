@@ -77,27 +77,3 @@ main-map {
     font-size: 20px;
     margin: 0 0 10px 0;
 }
-
-/* 주변식당 */
-.nearby-restaurants h3 {
-	margin: 40px 0 10px 0;
-	font-size: 20px;
-}
-
-.nearby-restaurants ul {
-	list-style: none;
-}
-
-.nearby-restaurants li {
-	margin-bottom: 10px;
-	font-size: 16px;
-}
-
-.nearby-restaurants a {
-	color: #333;
-	text-decoration: none;
-}
-
-.nearby-restaurants a:hover {
-	text-decoration: underline;
-}
