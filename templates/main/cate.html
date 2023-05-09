@@ -57,7 +57,7 @@
             <ul class="pagination model">
                 <li><a href="?cates={{cate_title}}&page={{ 1 }}" class="first">first</a></li>
                 
-                {% if page_info.currentPage != 1 %}
+                {% if page_info.currentPage != 1 and page_info.currentPage > 10 %}
                 <li><a href="?cates={{cate_title}}&page={{page_info.currentPage|add:-10}}" class="arrow left">&lt</a></li>
                 {% endif %}
 
