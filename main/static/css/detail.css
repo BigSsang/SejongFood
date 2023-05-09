@@ -13,6 +13,11 @@ main {
 	margin: 100px 100px 0px 100px;
 }
 
+.restaurant-usa{
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 20px;
+}
+
 .restaurant-info,
 .restaurant-list {
 	flex-basis: 65%;
@@ -46,20 +51,16 @@ main {
 	font-size: 16px;
 }
 
-.restaurant-list ul {
-	list-style: none;
-}
-
-.restaurant-list li {
+.restaurant-usa li {
 	margin-bottom: 10px;
 	font-size: 16px;
 }
 
-.restaurant-list h2{
+.restaurant-usa h2{
     margin: 0 0 10px 0;
 }
 
-.restaurant-list a:hover {
+.restaurant-usa a:hover {
 	text-decoration: underline;
 }
 

@@ -115,28 +115,35 @@ def cate(request):
         "totalPage" : 0,
         "countPerPage" : 10,
     }
+
     page_info["currentPage"] = request.GET.get('page')
+
     if not page_info["currentPage"]:
         page_info["currentPage"] = 1
     else:
         page_info["currentPage"] = int(page_info["currentPage"])
         if page_info["currentPage"] <= 0:
             page_info["currentPage"] = 1
+
     page_info["totalPage"] = (cate1.count() // page_info["countPerPage"]) + 1
     if (cate1.count() % page_info["countPerPage"]) == 0:
         page_info["totalPage"] -= 1
-    if (page_info["currentPage"] % page_info["underPageCount"])==0:
-         page_info["startPage"] = ((page_info["currentPage"] // page_info["underPageCount"])-1)* page_info["underPageCount"] +1
+
+    if (page_info["currentPage"] % page_info["underPageCount"]) == 0:
+        page_info["startPage"] = ((page_info["currentPage"] // page_info["underPageCount"]) - 1) * page_info["underPageCount"] + 1
     else:
         page_info["startPage"] = (page_info["currentPage"] // page_info["underPageCount"]) * page_info["underPageCount"] + 1
+
     page_info["endPage"] = page_info["startPage"] + page_info["underPageCount"] - 1
     if page_info["currentPage"] >= page_info["totalPage"]:
         page_info["currentPage"] == page_info["totalPage"]
     if page_info["endPage"] > page_info["totalPage"]:
         page_info["endPage"] = page_info["totalPage"]
-    pageRange = range(page_info["startPage"], page_info["endPage"]+1)
+
+    pageRange = range(page_info["startPage"], page_info["endPage"] + 1)
     paginator = Paginator(cate1, page_info["countPerPage"]) 
     cate_list = paginator.get_page(page_info["currentPage"]) 
+
 
     return render(request, 'main/cate.html', {"cate_list":cate_list, "page_info":page_info, "pageRange":pageRange,"cate_title":cates})
 

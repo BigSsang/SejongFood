@@ -75,12 +75,12 @@ td {
 
 /* 번호 및 화살표,첫,끝 모양+색 */
 .pagination a {
-    color: black;
+    /* color: black; */
     text-decoration: none;
     padding: 8px 14px;
     margin: 0;
     border-radius: 5px;
-    background-color: white;
+    /* background-color: white; */
     border: 1px solid rgba(120, 120, 120, 0.495);
 }
 
@@ -89,4 +89,16 @@ td {
     background-color: #4CAF50;
     color: white;
     border: 1px solid #2b4f1e93;
+}
+
+/* 해당페이지색 */
+.num-active {
+    color: #000000;
+    font-weight:bold;
+    background-color: #25d33d;
+}
+
+.num {
+    color: #000000;
+    background-color: #ffffff;
 }

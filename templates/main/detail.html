@@ -22,17 +22,17 @@
         
             <section class="restaurant-list">
                 <h2>비슷한 식당</h2>
+                {% for id, name, store_type, address in sejong_list %}
                 <ul>
                     <li>
-                        {% for id, name, store_type, address in sejong_list %}
-                        <div class="restaurant-info">
+                        <div class="restaurant-usa">
                             <h3>식당 이름 : <a class="restaurant-link" href="../detail/{{id}}">{{name}}</a></h3>
                             <p>식당 종류 : {{store_type}}</p>
                             <p>주소: {{address}}</p>
                         </div>
-                        {% endfor %}
                     </li>
                 </ul>
+                {% endfor %}
             </section>
         </section>
         <section class="map-info">
@@ -40,14 +40,7 @@
 			<div class="main-map">
 				{% include 'main/map.html' %}
 			</div>
-			<!-- <div class="nearby-restaurants">
-				<h3>주변 식당</h3>
-				<ul>
-					<li><a href="#">주변 식당 1</a></li>
-					<li><a href="#">주변 식당 2</a></li>
-					<li><a href="#">주변 식당 3</a></li>
-				</ul>
-			</div> -->
+
 		</section>
     </main>
 </body>

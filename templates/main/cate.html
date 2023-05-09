@@ -56,13 +56,23 @@
         <div class="page">
             <ul class="pagination model">
                 <li><a href="?cates={{cate_title}}&page={{ 1 }}" class="first">first</a></li>
+                
+                {% if page_info.currentPage != 1 %}
                 <li><a href="?cates={{cate_title}}&page={{page_info.currentPage|add:-10}}" class="arrow left">&lt</a></li>
+                {% endif %}
+
                 {% for pr in pageRange %}
+                {% if pr == page_info.currentPage %}
+                <li class="page-item"><a class="num-active" href="?cates={{cate_title}}&page={{ pr }}">{{ pr }}</a></li>
+                {% else %}
                 <li class="page-item"><a class="num" href="?cates={{cate_title}}&page={{ pr }}">{{ pr }}</a></li>
+                {% endif %}
                 {% endfor %}
+
                 {% if page_info.endPage != page_info.totalPage %}
                 <li> <a href="?cates={{cate_title}}&page={{page_info.currentPage|add:10}}" class="arrow right">&gt</a></li>
                 {% endif %}
+
                 <li><a href="?cates={{cate_title}}&page={{ page_info.totalPage}}" class="last">last</a></li>
             </ul>
         </div>
