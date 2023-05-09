@@ -89,6 +89,7 @@ def find_simi_place_d(df, sorted_ind, place_name, top_n=5):
 
 def detail(request, pk):
     food = Sejong_A.objects.get(id=pk)
+    food.menu_keyword = food.menu_keyword.replace(',',' ')
 
     sejong_place = find_simi_place_d(sejong, place_simi_co_sorted_ind, food.name, 6)
     sejong1 = sejong_place['id'].values
