@@ -70,7 +70,7 @@ def search(request):
 
     sejong_place = find_simi_place(sejong, place_simi_co_sorted_ind, search, 10)
     if sejong_place.empty:
-        return HttpResponse("<script>alert('검색결과가 없습니다.다른 단어로 검색해주세요');location.href='../search/';</script>")
+        return HttpResponse("<script>alert('검색결과가 없습니다.다른 단어로 검색해주세요');location.href='../';</script>")
     else:
         sejong1 = sejong_place['id'].values
         sejong2 = sejong_place['name'].values
